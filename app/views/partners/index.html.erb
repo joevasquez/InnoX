@@ -1,0 +1,7 @@
+      <% @partners.each do |t| %>
+      <div class="partner-button">
+        <%= image_tag t.image %>
+        <h2><%= t.title %></h2>
+        <%= link_to "Learn more", partner_path(t) %>
+      </div>
+      <% end %>
