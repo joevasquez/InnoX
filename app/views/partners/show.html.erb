@@ -1,11 +1,22 @@
-<h2><%= @partner.title %></h2>
+<div class="header">
+  <div class="container">
+    <img src="<%= @partner.image %>" width="80">
+    <h1><%= @partner.title %></h1>
+  </div>
+</div>
 
+<div class="tag">
+  <div class="container">
     <div class="cards row">
       <% @startups.each do |d| %>
       <div class="card col-xs-4">
         <%= image_tag d.image %>
         <h2><%= d.title %></h2>
         <p><%= d.description %></p>
+        <%= link_to "See details", startup_path(d) %>
       </div>
       <% end %>
     </div>
+
+  </div>
+</div>

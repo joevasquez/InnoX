@@ -1,0 +1,87 @@
+<div class="wrapper">
+    <div class="page-wrapper" style="background-color:#eaebec; min-height:1000px; padding-top:40px">
+    <div style="width:95%; margin:auto; max-width:1100px;" class="white-box">
+      <div class="top-company-box">
+        <div class="cover">
+          <div class="cover-image-container">
+            <img src="https://runway-photos.s3.amazonaws.com/58cab550-506c-44e5-ba3a-4fa332fb3e5c.jpg"/>
+          </div>
+        </div>
+        <div class="company-logo-profile">
+          <a href="#">
+            <img src="<%= @startup.image %>"/>
+          </a>
+        </div>
+        <div class="profile-info-block">
+          <div class="profile-name"><%= @startup.title %></div>
+
+          <div class="profile-website"><a href="<%= @startup.website %>" style="text-decoration:none" target="_blank"><%= @startup.website %></a></div>
+
+          <div style="float:right"><%= link_to "Edit", edit_startup_path(@startup) %></div>
+
+          <a style="text-decoration:none; color:white" href="#">
+            <div class="type-tag capitalize" style="width:auto; max-width:225px;">
+              <%= @startup.vertical %>
+            </div>
+          </a>
+
+          <div style="right:5px; bottom:5px; position:absolute; color: grey; font-size: 0.9em;">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="width:95%; margin:25px auto; max-width:1100px;">
+      <div class="col-lg-6 white-box what-we-do">
+        <h4>WHAT WE DO</h4>
+        <div id="company-bio">
+          <%= @startup.description %>
+        </div>
+        <div class="skill-tags">
+
+        </div>
+
+
+        <div class="content-spacer"></div>
+        <h4>OUR TEAM</h4>
+
+        <div style="clear:both;height:20px;"></div>
+      </div>
+
+      <div class="col-lg-6" style="padding-right:0">
+          <div class="white-box padding investment-info">
+
+
+              <iframe width="100%" height="350" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+              <div style="clear:both; height:20px;"></div>
+
+
+            <h4>INVESTMENT INFORMATION</h4>
+
+                    <div class="round-box">
+                      <div class="active-round">
+
+                      </div>
+                      <div class="round">Round: <%= @startup.round %></div>
+                      <div class="amount">Amount: <%= @startup.funding %></div>
+                      <div class="crunchbase-link"><a href="http://www.crunchbase.com/company/">View more on Crunchbase</a></div>
+                    </div>
+          </div>
+
+
+                  <div class="white-box padding investment-info what-we-do">
+            <h4>CONTACT</h4>
+            <ul class="contact-info">
+              <a target="_blank" href="https://www.twitter.com/">Hello</a>
+            </ul>
+
+            <div class="content-spacer"></div>
+
+
+          </div>
+
+      </div>
+    </div>
+    <div style="clear:both; height:20px;"></div>
+  </div>
+</div>
