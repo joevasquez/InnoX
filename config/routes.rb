@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get 'partners'=>'partners#index'
   get 'partners/:id'=>'partners#show', as: :partner
+  get 'startups/:id'=>'startups#show', as: :startup
+  get '/startups/:id/edit' => 'startups#edit', as: :edit_startup
+  patch '/startups/:id' => 'startups#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
